@@ -48,7 +48,7 @@ def monthly_challenge(request, month):
         challenge_txt = monthly_challenges[month]
         return render(request, "challenges/challenge.html", {
             "text": challenge_txt,
-            "month_name": month.capitalize()
+            "month_name": month
         })
     except: 
         return HttpResponseNotFound("<h1>This month is not Found</h1>")
